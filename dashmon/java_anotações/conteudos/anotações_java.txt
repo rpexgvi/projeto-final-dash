@@ -1,0 +1,236 @@
+links
+https://github.com/humbertosousa/gama_material
+https://wordpad.cc/turma16c
+GamaAcademi@123
+
+O.O permite reaproveitamento de codigo
+
+paradigma estruturado (script) (como ocorre o processo: venda, compra, clientes)
+ao inves de O.O (o que é o seu produto, quem é o seu cliente)
+
+JDK JAVA DEVELOPMENT KIT - Ferramentas para o desenvolvedor - dev
+ JRE JAVA RUNTIME ENVIRONMENT - Permite executar/preparar as execuções do Java. user
+  JVM JAVA VIRTUAL MACHINE (ATUALIZAÇÕES DO JAVA)- Portabilidade entre os diversos S.os. user
+
+
+backend - recomenda-se o uso de Java devido a qtde de acessos.
+
+
+
+
+*** Nivel da linguagem
+Alto nivel : ex phyton - mais simples para o aprendizado, pq
+esta proximo da linguagem humana.
+
+Baixo nivel: mais complexo, proximo de linguagem de maquina
+
+* Comentário: // para pequenos textod  /* para textos longos
+* Tipos de dados : Numerico (dados que pode ser utilizado em calculo matematico)
+		   Alfanumerico (dados que Não serão utilizados em calculo)
+
+ex: cep numerico 00010-009 = 1
+	cep alfanumerico 00010-009 = 00010-009
+
+* Numeros com casas decimais = INT sem casas decimais DOUBLE
+* Nomes = string
+
+**sintaxe: 
+
+tipo do dado > nome da variavel = valor/dado
+ex: String marca = "Samsung"
+
+* Toda aplicação deve conter um metodp main (start point)
+
+public static void main (String args []) {}
+o que estiver em roxo são palavras reservadas (ctrl+space+enter)
+
+* System.out.print("Hello Word");
+system = classe 
+print () = metodo
+
+* System.out.printf("\nIMC    : %.2f " , imc);
+usando 2 pontos apos a casa decimal
+
+* System.out.printf("Ola %s seu imc eh %.2f", nome, imc);
+usando variaveis como parametro
+
+* System.out.printf("No jogo entre %s x %s a arrecadação foi de : R$ %.2f ", time1, time2, total);
+
+* String time1 = JOptionPane.showInputDialog("Digite o time 1");
+Tela de input de dados
+
+* Ctrl+shift+o - efetua o import das bibliotecas do Java.
+
+* swing - pacote com classes necessarias para criação de telas do Java.
+import javax.swing.JOptionPane;
+
+*String time1 = JOptionPane.showInputDialog("Digite o time 1");
+
+
+->classes wrappers : classes que apoiam ripos primitivos (int=integer/double=double)
+tipos primitivos : (numéricos)
+
+boolean - true/false (perguntas lógicas) trabalha?
+char - Armazena somente UM caracter. Sempre entre apostrofos.ex: 'a'
+-----------------------------------------------------------------------
+tamanho do armazenamento
+byte - (-127 até +128)
+short - -32 até +32k
+int - -2tri até +2tri
+long - quintilhoes
+float - com pouca precisão nas casas decimais (5 casas)
+double - dobro de precisão que o float nas casas decimais.
+
+* double entrada = Double.parseDouble(JOptionPane.showInputDialog("Digite a entrada" ));
+converte o valor double para double antes do input do valor via JOPTION
+
+*int publico = Integer.parseInt(JOptionPane.showInputDialog("Dugite o publico total :"));
+converte o valor int para int antes do input do valor via JOPTION
+
+
+Tipo String 
+
+String email = "rodrIgo.A.paula@itau-unibanco.com.br";
+		System.out.println("Original: " + email);
+		System.out.println("Minuscula: " + email.toLowerCase());
+		System.out.println("Maiuscula: " + email.toUpperCase());
+		System.out.println("Qtde de caracteres: " + email.length());
+		System.out.println("É IGUAL: " + email.equals("teste@teste"));
+		System.out.println("É IGUAL 2 " + email.equalsIgnoreCase("rodrIgo.a.paula"));
+		System.out.println("Contem o caracter @ ? " + email.contains("@"));
+		System.out.println("Posição da letra " + email.indexOf("@"));
+		System.out.println("Do 3º e 4º caracter : " + email.substring(2,4));
+		System.out.println("Exibe o que está antes do arroba : " + email.substring(0,7));
+
+
+
+
+if (email.contains("@") == true) {
+						
+			System.out.println("Exibe o que está antes do arroba2 : " + email.substring(0,email.indexOf("@")));
+		}
+		
+
+if (email.contains("@") != true) {
+						
+			System.out.println("Exibe o que está antes do arroba2 : " + email.substring(0,email.indexOf("@")));
+		}
+		
+
+* ctrl+shits+s = save
+* ctrl / = comenta
+* ctrl m = expande a tela
+* \n salta linha
+
+=====================================================
+Plataformas: 
+Eclipse IDE / Net beans IDE (java, js, phyton)
+para phyton (anaconda, phy sharm)
+=====================================================
+Aula 1 - 15/03
+
+1) Workspace onde fica todos os projetos/codigos
+ex: workspace Conta corrente 
+
+file > new > project > JRE > JavaSE 8 (1.8)
+
+2)SRC> onde criamos os arquivos do nosso projeto
+médio porte +- 50 arquivos
+
+3)src> new > package
+variaveis/repetição/decisão
+ para renomear > refactor> rename
+
+4)Toda classe deve iniciar em maiuscula e junta.
+botão direito no package(repartição) > new class é gerado o .java (código fonte)
+
+*uma classe publica pode ser acessada por qqr pacote (qq .java)
+
+*ex:
+public class TiposDados {tudo que estiver aqui dentro fará parte da classe tipo dados}
+
+
+
+===================================================
+11:49 17/03/2021
+O.O
+analise-projeto-programação
+
+
+**Diagrama de classe - abstração
+Classe > instancia do objeto
+Atributo=caracteristica
+
+**Encapsulamento - dar acesso somente ao que é permitido
+
+
+Veiculo"classe" > (parametros) (Métodos)
+
+
+// sintaxe dos metodos
+	// <modificador> <tipo do retorno> <nome do metodo> (<tipo> <nome> do parm)
+	
+	public void preencherMontadora (String param)
+
+==============================================
+
+Exercicio gama aluno
+DTO melhores praticas para representar uma classe de um diagrama em programação
+Regras do padrão DTO:
+
+
+1)-Todos os atrubutos devem ser privados.
+2)-cada atributo deve possuir INDIVIDUALMENTE um método para input e outro metodo para output.
+
+(metodo) getter(retornar)/setter (preecher)
+
+modelo=model=beans=javabeans=to=dto (pacotes com classes originadas)
+
+teste=proncipal=implementação
+
+gerar toString/criar instancias
+
+3)toda classe modelo deve possuir no minimo dois construtores:
+um vazio w um cheio (com todos os atributos)
+
+
+4) Endereco endereco = new Endereco(); > metodo construtor
+
+
+
+==============================================
+composição, quando um objeto é compostro por outro via Classe
+
+==============================================
+herança
+
+compartilhar metodo 
+
+==============================================
+	// colection framework são usadas para manipulação de um conjunto de dados
+		// são mais flexiveis do que os vetores - 
+		//Pricipais recursos
+		//Alocação dinamica
+
+================================================
+
+
+quando um elemento possui um mesmo nome e diversas formas
+método :
+-overload(sobrecarga) dois metodos com o mesmo nome na mesma classe.
+-override(sobrescrita) dois metodos com o mesmo nome, um na classe pai outro na classe filha.
+
+polimorfismo Objeto:
+Crio pelo pai e instancio pelo filho.
+Conta conta = new conta;
+conta=new Poupança;
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+chave pr-maria não deixa duplicar e cria um indice para pesquisas.
+
+codigo_cliente integer not null primary key,
+ou
+primary key (codigo_cliente))
+
+http://generatedata.com/
+https://www.dbdesigner.net/
+
+Comandos:
+
+-- create database
+create database itau;
+-- colocando o db em uso
+use itau;
+
+-- criação dos campos na tabela
+create table itau.clientes(
+codigo_cliente integer not null primary key,
+nome_cliente varchar(50) not null,
+idade_cliente integer(3) not null,
+email_cliente varchar(80) not null
+);
+
+-- verificando a estrutura da tabela
+
+describe itau.clientes;

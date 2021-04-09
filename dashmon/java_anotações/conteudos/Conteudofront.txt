@@ -1,0 +1,530 @@
+Criando função e acessos com javascript
+-------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gama JavaScript</title>
+
+    <!-- criando chamada em java script-->
+    <script>
+        // alert("Sejam todos bem vindos ");
+
+
+        /*
+        var empresa =" Gama Academy";
+        var mensagem= "Sejam bem vindos ";
+
+        alert (mensagem+empresa);*/
+
+        /*
+        var nome = prompt ("Olá qual o seu nome?");
+        alert ("Seja bem vindo "+nome);*/
+
+        function mensagem(){
+            alert("Oi eu sou uma mensagem");
+
+        }
+
+
+        function validar(){
+            var nome = contato.nome.value;
+
+            if (nome==""){
+                alert("O preenchimento do campo nome é obrigatório");
+                contato.nome.focus();
+                return false;
+            }
+            
+            
+            
+            alert(" Seja bem vindo "+nome);
+        }
+
+    </script>
+
+
+
+
+</head>
+<body>
+        
+        <h3>Click no botão abaixo</h3>
+        <br>
+        <input type="button" onclick="mensagem()" value="click">
+
+        <form id="contato" method="Post">
+            nome: <input type="text" name="nome"><br><br>
+            <input type="submit" onclick="return validar()" value="enviar">
+
+        </form>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+Criando o menu com NavBar
+---------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!--JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+
+
+</head>
+<body>
+        <!-- NavBar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><img src="../imagens/logo.png" width="120" height="40"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">QUEM SOMOS <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    PARA PESSOAS
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Gama Station (App)</a>
+                    <a class="dropdown-item" href="#">Product Manager</a>
+                    <a class="dropdown-item" href="#">Custumer Sucess</a>
+                    <a class="dropdown-item" href="#">Product Design (XP)</a>
+                    <a class="dropdown-item" href="#">Dev Fullstack (XP)</a>
+                  </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      PARA PESSOAS
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Gama Station (App)</a>
+                      <a class="dropdown-item" href="#">Product Manager</a>
+                      <a class="dropdown-item" href="#">Custumer Sucess</a>
+                      <a class="dropdown-item" href="#">Product Design (XP)</a>
+                      <a class="dropdown-item" href="#">Dev Fullstack (XP)</a>
+                    </div>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <!-- container-->
+          <div class="container">
+              <div class="row">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="../imagens/imagem1.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../imagens/imagem2.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../imagens/imagem3.png" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+              </div>
+              <!-- campos de formulário-->
+              <div class="row">
+                <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Endereço de Email</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Senha</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+              </div>
+          </div>
+
+</body>
+</html>
+
+Página em Bootstrap
+------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gama Bootstrap</title>
+
+
+    <!--chamada da blibliotaca CSS do BootStrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
+    <!--chamada da biblioteca JS do BootStrap-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+     <!-- chamando um arquivo de estilos dentro da nossa biblioteca-->
+     <link rel="stylesheet" href="../css/estilos.css">
+
+
+</head>
+<body>
+        <!-- criando o container da nossa página em bootstrap-->
+        <div class="container">
+            <!-- inserindo uma linha dentro da nossa página no container-->
+            <div class="row">
+                <!-- criando as colunas com os conteúdos desejados-->
+                <div class="col-lg-4 col-md-2 col-sm-3 div1">home</div>
+                <div class="col-lg-3 col-md-5 col-sm-3 div2">produtos</div>
+                <div class="col-lg-2 col-md-3 col-sm-3 div3">link</div>
+                <div class="col-lg-3 col-md-2 col-sm-3 div4">contatos</div>
+            </div>
+            <!-- inserindo uma nova linha para fazer um banner-->
+            <div class="row">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="../imagens/imagem1.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../imagens/imagem2.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../imagens/imagem3.png" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+
+            </div>
+        </div>
+
+
+</body>
+</html>
+
+
+
+
+Página Index.html
+________________
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gama Academy</title>
+
+    <!-- chamando um arquivo de estilos dentro da nossa biblioteca-->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <!-- criando o nosso componente de estilos em CSS-->
+    <style>
+        
+        /* criando estilos com comando nativos do html
+        h1{
+            font-size: 26px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+            color: rgb(56, 12, 107);
+            text-align: center;
+        }
+        p{
+            font-size: 14px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        body{
+            background-color: rgb(195, 233, 195);
+        }
+
+        /* criando estilos de classe no CSS
+        .atenção{
+            font-size: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color:gray;
+        }
+        .menu{
+            font-size: 14px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+            color:rgb(10, 3, 54);
+        }*/
+
+    </style>
+
+</head>
+
+<body>
+    <!-- criando uma menu utilizando uma tabela-->
+    <table border="0" width="100%" class="menu">
+        <!-- inserir uma linha-->
+        <tr>
+            <!-- inserindo colunas para o nosso menu-->
+            <td align="center"><img src="../imagens/logo.png" width="160" height="40"> </td>
+            <td align="right">QUEM SOMOS</td>
+            <td align="right">PARA PESSOAS</td>
+            <td align="right">PARA EMPRESAS</td>
+            <td align="right"><a href="../html/contato.html">CONTATO</a>  </td>
+            <td align="right">CONTEÚDOS</td>
+
+        </tr>
+    </table>
+
+    <!-- criando uma tabela utilizando a tag <table>-->
+    <table border="0" width="100%" cellpadding="20">
+        <!-- inserindo linhas na nossa tabela <tag> <tr>-->
+        <tr>
+            <!-- inserindo colunas na nossa tabela <tag> <td>-->
+            <td align="right">
+                <!-- Inserindo uma imagem na nossa página utilizando a tab <img>-->
+                <img src="../imagens/pessoas.png">
+            </td>
+            <td>
+                <!-- Criando o título da nossa página com a tag <h1>..<h2>..<h3>..<h6>-->
+                <!-- Criando uma quebra de linha com a tag <br>-->
+                <h1>ISTO NÃO É <br> UMA ESCOLA</h1>
+                <!--
+                        <h2>ISTO NÃO É <br> UMA ESCOLA</h2>
+                        <h3>ISTO NÃO É <br> UMA ESCOLA</h3>
+                        <h4>ISTO NÃO É <br> UMA ESCOLA</h4>
+                        <h5>ISTO NÃO É <br> UMA ESCOLA</h5>
+                        <h6>ISTO NÃO É <br> UMA ESCOLA</h6>-->
+
+                <!-- Criando parágrafos de conteúdo na nossa página, utilizando a tab <p>-->
+                <p>Esse lema nos trouxe até aqui!<br>
+                    Somos diferentes e visionários.</p>
+                <!-- deixando o texto em negrito com a <tag> <b>-->
+                <p>Tão inexplicáveis que <b>era mais simples dizer o que não éramos</b></p>
+                <p>Marca inovadora e questionadora por essência,
+                    questionou a si mesmo<br> sobre <b>como se reinventar</b>
+                    <!-- deixando o nosso texto tachado com a <tag> <strike>-->
+                    em um momento de <strike>crise</strike> oportunidade para<br> chegar
+                    ainda mais perto do seu objetivo de impactar 1
+                    milhão de vidas.</p>
+                <p class="atenção">Não éramos uma escola, éramos uma experiência diferenciada de aprendizagem:<br>
+                    “ menos conversinha e mais conversão! ”</p>
+
+
+                <!-- inserindo um link na nossa página <tag> <a hef>-->
+                <!-- atributo para abrir o link em uma nova página target="_blank"-->
+                <!--
+                <a href="https://www.youtube.com/watch?v=YmfBy9mihL0" target="_blank">
+                    <!-- inserindo uma imagem para compor um link com botão
+                    <img src="../imagens/play.png" width="40" height="40">
+                </a>-->
+                <!-- incorporando um componente do youtube-->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YmfBy9mihL0"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+
+            </td>
+        </tr>
+    </table>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+Página contrato.html
+________________
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gama Academy - Contato</title>
+
+    <!-- chamando um arquivo de estilos dentro da nossa biblioteca-->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+
+</head>
+<body>
+    <!-- criando uma menu utilizando uma tabela-->
+    <table border="0" width="100%" class="menu">
+        <!-- inserir uma linha-->
+        <tr>
+            <!-- inserindo colunas para o nosso menu-->
+            <td align="center"><a href="../html/index.html"><img src="../imagens/logo.png" width="160" height="40"></a>   </td>
+            <td align="right">QUEM SOMOS</td>
+            <td align="right">PARA PESSOAS</td>
+            <td align="right">PARA EMPRESAS</td>
+            <td align="right">CONTATO</td>
+            <td align="right">CONTEÚDOS</td>
+
+        </tr>
+    </table>
+    <!-- Criando o nosso formulário de contatos utilizaremos a tag <form> -->
+    <form id="contato" method="POST">
+        <!-- inserindo a área do nosso formulário com tag <fieldset>-->
+        <fieldset>
+            <!-- inserindo um legenda no formulário com tag <legend> -->
+                <legend>Preencha os campos do nosso formulário</legend>
+                <label>Nome:</label><input type="text" name="nome" class="campo_nome" required><br><br>
+                <label>Email:</label><input type="email" name="email" class="campo_email" required><br><br>
+                <label>Senha:</label><input type="password" name="senha" required><br><br>
+                <label>Genero:</label>
+                <!-- radio button-->
+                <input type="radio" name="genero" value="Feminino">Feminino
+                <input type="radio" name="genero" value="Masculino">Masculino
+                <input type="radio" name="genero" value="Outros">Outros<br><br>
+                <!-- criando um menu do tipo dropdown-->
+                <label>Escolha o curso que deseja fazer:</label>
+                <select required>
+                    <option name="" value=""></option>
+                    <option name="curso" value="HTML">HTML</option>
+                    <option name="curso" value="CSS">CSS</option>
+                    <option name="curso" value="XML">XML</option>
+                    <option name="curso" value="JS">JavaScript</option>
+                </select><br><br>
+                <!-- criando um botão de checkbox-->
+                <label>Escolha o período que deseja fazer o curso</label>
+                <input type="checkbox" name="check" value="Manhã">Manhã
+                <input type="checkbox" name="check" value="Tarde">Tarde
+                <input type="checkbox" name="check" value="Noite">Noite<br><br>
+                <!-- abrindo o calendário para escolha da data-->
+                <label>Escolha a data da realização do curso:</label>
+                <input type="date" name="date"><br><br>
+                <!-- criando uma caixa de mensagem-->
+                <label>Mensagem:</label><br>
+                <textarea cols="35" row="4" name="mensagem"></textarea><br><br>
+                <!-- vinculando um arquivo ao formulário-->
+                <label>Por favor anexar um comprovante de residência:</label>
+                <input type="file" name="arquivo"><br><br>
+
+                <!-- criando um botão para envio dos dados-->
+                <input type="submit" value="Enviar">
+
+        </fieldset>
+    </form>
+
+</body>
+</html>
+
+
+Bliblioteca de estilos.css
+____________________
+        /* criando estilos com comando nativos do html*/
+        h1{
+            font-size: 26px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+            color: rgb(56, 12, 107);
+            text-align: center;
+        }
+        p{
+            font-size: 14px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        body{
+            background-color: rgb(225, 184, 235);
+        }
+
+        /* criando estilos de classe no CSS*/
+        .atenção{
+            font-size: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color:gray;
+        }
+        .menu{
+            font-size: 14px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+            color:rgb(10, 3, 54);
+        }
+
+        /* formatando os campos do formulário*/
+        .campo_nome{
+            position: relative;
+            left: 14px;
+            width: 250px;
+            background-color: rgb(236, 213, 182);
+            color:red;
+        }
+
+        .campo_email{
+            position: relative;
+            left: 14px;
+            width: 280px;
+            background-color: rgb(236, 213, 182);
+            color:red;
+        }
+        
+        /* criando uma classe para nome de componentes*/
+        #contato{
+            font-size: 12px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(93, 9, 9);
+            background-color: rgb(238, 181, 160);
+
+        }
